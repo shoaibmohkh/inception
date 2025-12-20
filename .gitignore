@@ -2,5 +2,8 @@
 secrets/
 srcs/.env
 
+# Ignore README (we don't want it)
+README.md
+
 # OS / editor noise
 .DS_Store

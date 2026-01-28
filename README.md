@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Inception
-
-This project has been created as part of the 42 curriculum by sal-kawa.
-=======
 *This project has been created as part of the 42 curriculum by sal-kawa.*
 
 # Inception
@@ -164,4 +159,3 @@ This project uses bind mounts with the `local` driver - data goes to `/home/sal-
 ---
 
 **Author:** Shoaib Al-kawaldeh (sal-kawa)
->>>>>>> e863b41 (inception: upload project)

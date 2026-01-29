@@ -1,20 +1,33 @@
-NAME = inception
-SRCS = 
-OBJS = $(SRCS:.cpp=.o)
-CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -g -std=c++98
+NAME    = inception
+COMPOSE = docker compose -f srcs/docker-compose.yml
+DATA_DIR = /home/$(USER)/data
 
-all: $(NAME)
+all: up
 
-$(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+prepare:
+	mkdir -p $(DATA_DIR)/mariadb $(DATA_DIR)/wordpress
+
+up: prepare
+	$(COMPOSE) up -d --build
+
+down:
+	$(COMPOSE) down
 
 clean:
-	rm -f $(OBJS)
+	$(COMPOSE) down --remove-orphans
+	docker image prune -f
 
 fclean: clean
-	rm -f $(NAME)
+	$(COMPOSE) down -v --remove-orphans
+	docker system prune -af --volumes
+	rm -rf $(DATA_DIR)/mariadb $(DATA_DIR)/wordpress
 
-re: fclean all
+re: fclean up
 
-.PHONY: all clean fclean re
+ps:
+	$(COMPOSE) ps
+
+logs:
+	$(COMPOSE) logs -f
+
+.PHONY: all prepare up down clean fclean re ps logs

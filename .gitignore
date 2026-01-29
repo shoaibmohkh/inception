@@ -1,9 +1,11 @@
-# Secrets must never be committed
-secrets/
-srcs/.env
-
-# Ignore README (we don't want it)
-README.md
-
 # OS / editor noise
 .DS_Store
+
+# Docker / system junk
+*.log
+
+# Secrets (never commit real credentials)
+secrets/
+
+# Optional: local override env (if you use one)
+.env.local

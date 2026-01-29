@@ -20,7 +20,7 @@ clean:
 fclean: clean
 	$(COMPOSE) down -v --remove-orphans
 	docker system prune -af --volumes
-	rm -rf $(DATA_DIR)/mariadb $(DATA_DIR)/wordpress
+	sudo rm -rf $(DATA_DIR)/mariadb $(DATA_DIR)/wordpress
 
 re: fclean up
 

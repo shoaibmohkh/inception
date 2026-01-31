@@ -60,19 +60,22 @@ Passwords are in the `secrets/` folder. WordPress admin is `sal-kawa_hell`.
 
 ### References
 
-*[Add documentation, articles, tutorials you used here]*
-
-- 
-- 
-- 
+- [Docker Fundamentals - Cantrill](https://learn.cantrill.io/p/docker-fundamentals)
+- [MariaDB Documentation](https://mariadb.com/docs/)
+- [Nginx Admin Guide - Basic Functionality](https://docs.nginx.com/nginx/admin-guide/basic-functionality/)
+- [Docker Networking Crash Course (YouTube)](https://www.youtube.com/watch?v=q8OleYuqntY)
+- [OCI vs Docker: What is a Container?](https://www.theodo.com/en-fr/blog/oci-vs-docker-what-is-a-container)
+- [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- [Dockerfile Best Practices](https://medium.com/@aditya_misra5/dockerfile-best-practices-1de436c966a5)
+- *Docker Deep Dive Zero to Docker in a Single Book* (Book) 
 
 ### AI Usage
 
-*[Describe how AI was used, for which tasks and which parts]*
+- Used AI as a guide to understand where to start with the project
+- AI helped break down the project into milestones and provided an overview of the entire workflow
+- For each milestone, AI assisted in identifying what concepts to learn and in what order
+- Used AI to clarify Docker, Nginx, MariaDB, and WordPress concepts while studying the documentation
 
-- 
-- 
-- 
 
 ## Project Description
 

@@ -21,10 +21,12 @@ DB_PW="$(cat "$USER_PW_FILE")"
 mkdir -p /run/mysqld
 chown -R mysql:mysql /run/mysqld "$DATADIR"
 
-if [ ! -d "$DATADIR/mysql" ]; then
+if [ ! -d "$DATADIR/.init" ]; then
   echo "Initializing MariaDB data directory..."
   mariadb-install-db --user=mysql --datadir="$DATADIR" >/dev/null
+  touch "$DATADIR/.init"
 fi
+
 
 echo "Starting temporary MariaDB for provisioning..."
 mysqld --user=mysql --datadir="$DATADIR" --socket="$SOCKET" --skip-networking &

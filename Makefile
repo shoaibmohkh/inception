@@ -8,7 +8,7 @@ prepare:
 	mkdir -p $(DATA_DIR)/mariadb $(DATA_DIR)/wordpress
 
 up: prepare
-	$(COMPOSE) up -d --build
+	$(COMPOSE) up -d
 
 down:
 	$(COMPOSE) down

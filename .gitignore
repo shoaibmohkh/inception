@@ -6,6 +6,3 @@
 
 # Secrets (never commit real credentials)
 secrets/
-
-# Optional: local override env (if you use one)
-.env.local

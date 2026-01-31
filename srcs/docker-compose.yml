@@ -3,6 +3,7 @@ services:
     container_name: mariadb
     build:
       context: ./requirements/mariadb
+    image: inception-mariadb
     env_file:
       - .env
     secrets:
@@ -18,6 +19,7 @@ services:
     container_name: wordpress
     build:
       context: ./requirements/wordpress
+    image: inception-wordpress
     env_file:
       - .env
     secrets:
@@ -36,6 +38,7 @@ services:
     container_name: nginx
     build:
       context: ./requirements/nginx
+    image: inception-nginx
     env_file:
       - .env
     depends_on:
@@ -70,10 +73,10 @@ volumes:
 
 secrets:
   db_root_password:
-    file: /home/sal-kawa/Inception/secrets/db_root_password.txt
+    file: ../secrets/db_root_password.txt
   db_password:
-    file: /home/sal-kawa/Inception/secrets/db_password.txt
+    file: ../secrets/db_password.txt
   wp_admin_password:
-    file: /home/sal-kawa/Inception/secrets/wp_admin_password.txt
+    file: ../secrets/wp_admin_password.txt
   wp_user_password:
-    file: /home/sal-kawa/Inception/secrets/wp_user_password.txt
+    file: ../secrets/wp_user_password.txt

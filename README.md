@@ -54,6 +54,7 @@ make
 
 ### Credentials
 
+
 Passwords are in the `secrets/` folder. WordPress admin is `sal-kawa_hell`.
 
 ## Resources

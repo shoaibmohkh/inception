@@ -1,6 +1,6 @@
 *This project has been created as part of the 42 curriculum by Shoaib Al-kawaldeh [sal-kawa].*
 
-# Inception
+# Dockerized-WordPress-Infrastructure
 
 ## Description
 
